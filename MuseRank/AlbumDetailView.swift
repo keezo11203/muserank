@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 struct AlbumDetailView: View {
-    var album: Album
+    @State var album: Album
+    @ObservedObject var viewModel: AlbumViewModel
 
     var body: some View {
         VStack {
@@ -25,11 +26,23 @@ struct AlbumDetailView: View {
             Text(album.artist)
                 .font(.title)
                 .foregroundColor(.secondary)
-            Text("Rating: \(album.rating)/5")
-                .font(.headline)
-                .padding(.top)
+            HStack {
+                Text("Rating: \(album.rating)/5")
+                Stepper("", value: $album.rating, in: 1...5)
+                    .labelsHidden()
+            }
+            .font(.headline)
+            .padding(.top)
+            TextField("Review", text: $album.review)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
             Spacer()
         }
         .navigationBarTitle(Text(album.title), displayMode: .inline)
+        .onDisappear {
+            if let index = viewModel.albums.firstIndex(where: { $0.id == album.id }) {
+                viewModel.albums[index] = album
+            }
+        }
     }
 }
