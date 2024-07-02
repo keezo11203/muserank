@@ -14,6 +14,10 @@
 		032555362C34658C00EDD151 /* MuseRankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032555352C34658C00EDD151 /* MuseRankTests.swift */; };
 		032555402C34658C00EDD151 /* MuseRankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325553F2C34658C00EDD151 /* MuseRankUITests.swift */; };
 		032555422C34658C00EDD151 /* MuseRankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032555412C34658C00EDD151 /* MuseRankUITestsLaunchTests.swift */; };
+		0325554F2C346A2B00EDD151 /* Albums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325554E2C346A2B00EDD151 /* Albums.swift */; };
+		032555582C346ED500EDD151 /* _SpotifyAPITestUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 032555572C346ED500EDD151 /* _SpotifyAPITestUtilities */; };
+		0325555A2C3477A500EDD151 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032555592C3477A500EDD151 /* AlbumViewModel.swift */; };
+		0325555C2C34810E00EDD151 /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325555B2C34810E00EDD151 /* AlbumDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,9 @@
 		0325553B2C34658C00EDD151 /* MuseRankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuseRankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0325553F2C34658C00EDD151 /* MuseRankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseRankUITests.swift; sourceTree = "<group>"; };
 		032555412C34658C00EDD151 /* MuseRankUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseRankUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0325554E2C346A2B00EDD151 /* Albums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Albums.swift; sourceTree = "<group>"; };
+		032555592C3477A500EDD151 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		0325555B2C34810E00EDD151 /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				032555582C346ED500EDD151 /* _SpotifyAPITestUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				032555242C34658700EDD151 /* MuseRankApp.swift */,
+				0325554E2C346A2B00EDD151 /* Albums.swift */,
+				0325555B2C34810E00EDD151 /* AlbumDetailView.swift */,
+				032555592C3477A500EDD151 /* AlbumViewModel.swift */,
 				032555262C34658700EDD151 /* ContentView.swift */,
 				032555282C34658C00EDD151 /* Assets.xcassets */,
 				0325552A2C34658C00EDD151 /* Preview Content */,
@@ -143,6 +154,8 @@
 			dependencies = (
 			);
 			name = MuseRank;
+			packageProductDependencies = (
+			);
 			productName = MuseRank;
 			productReference = 032555212C34658700EDD151 /* MuseRank.app */;
 			productType = "com.apple.product-type.application";
@@ -179,6 +192,9 @@
 				0325553D2C34658C00EDD151 /* PBXTargetDependency */,
 			);
 			name = MuseRankUITests;
+			packageProductDependencies = (
+				032555572C346ED500EDD151 /* _SpotifyAPITestUtilities */,
+			);
 			productName = MuseRankUITests;
 			productReference = 0325553B2C34658C00EDD151 /* MuseRankUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -215,6 +231,9 @@
 				Base,
 			);
 			mainGroup = 032555182C34658700EDD151;
+			packageReferences = (
+				032555522C346ED500EDD151 /* XCRemoteSwiftPackageReference "SpotifyAPI" */,
+			);
 			productRefGroup = 032555222C34658700EDD151 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0325555C2C34810E00EDD151 /* AlbumDetailView.swift in Sources */,
+				0325555A2C3477A500EDD151 /* AlbumViewModel.swift in Sources */,
+				0325554F2C346A2B00EDD151 /* Albums.swift in Sources */,
 				032555272C34658700EDD151 /* ContentView.swift in Sources */,
 				032555252C34658700EDD151 /* MuseRankApp.swift in Sources */,
 			);
@@ -577,6 +599,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		032555522C346ED500EDD151 /* XCRemoteSwiftPackageReference "SpotifyAPI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Peter-Schorn/SpotifyAPI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		032555572C346ED500EDD151 /* _SpotifyAPITestUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 032555522C346ED500EDD151 /* XCRemoteSwiftPackageReference "SpotifyAPI" */;
+			productName = _SpotifyAPITestUtilities;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 032555192C34658700EDD151 /* Project object */;
 }
