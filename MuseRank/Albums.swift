@@ -13,7 +13,7 @@ struct Album: Identifiable {
     var title: String
     var artist: String
     var coverImage: String
-    var rating: Int
+    var rating: Int?
     var review: String
 }
 

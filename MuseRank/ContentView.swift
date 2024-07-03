@@ -19,7 +19,7 @@ struct ContentView: View {
                         AlbumRow(album: album)
                     }
                 }
-                .navigationBarTitle("Music List")
+                .navigationBarTitle("MuseRank")
             }
         }
     }
@@ -41,8 +41,14 @@ struct AlbumRow: View {
                     .font(.subheadline)
             }
             Spacer()
-            Text("\(album.rating)/5")
-                .font(.subheadline)
+            if let rating = album.rating {
+                Text("\(rating)/5")
+                    .font(.subheadline)
+            } else {
+                Text("No Rating")
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+            }
         }
     }
 }

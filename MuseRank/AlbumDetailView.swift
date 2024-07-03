@@ -27,9 +27,16 @@ struct AlbumDetailView: View {
                 .font(.title)
                 .foregroundColor(.secondary)
             HStack {
-                Text("Rating: \(album.rating)/5")
-                Stepper("", value: $album.rating, in: 1...5)
-                    .labelsHidden()
+                if let rating = album.rating {
+                    Text("Rating: \(rating)/5")
+                } else {
+                    Text("No Rating")
+                }
+                Stepper("", value: Binding(
+                    get: { album.rating ?? 0 },
+                    set: { album.rating = $0 }
+                ), in: 1...5)
+                .labelsHidden()
             }
             .font(.headline)
             .padding(.top)
