@@ -19,7 +19,7 @@ struct ContentView: View {
                         AlbumRow(album: album)
                     }
                 }
-                .navigationBarTitle("MuseRank")
+                .navigationBarTitle("MuseRank: Review Your Favorite Albums")
             }
         }
     }
