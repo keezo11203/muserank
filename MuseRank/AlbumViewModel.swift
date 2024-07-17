@@ -10,16 +10,16 @@ import SwiftUI
 
 class AlbumViewModel: ObservableObject {
     @Published var albums: [Album] = [
-        Album(title: "HIT ME HARD AND SOFT", artist: "Artist 1", coverImage: "cover1", rating: nil, review: ""),
-        Album(title: "eternal sunshine", artist: "Artist 2", coverImage: "cover2", rating: nil, review: ""),
-        Album(title: "COWBOY CARTER", artist: "Artist 3", coverImage: "cover3", rating: nil, review: ""),
-        Album(title: "brat", artist: "Artist 4", coverImage: "cover4", rating: nil, review: ""),
-        Album(title: "TYLA", artist: "Artist 5", coverImage: "cover5", rating: nil, review: ""),
-        Album(title: "MEGAN", artist: "Artist 6", coverImage: "cover6", rating: nil, review: ""),
-        Album(title: "BB/ANG3L", artist: "Artist 7", coverImage: "cover7", rating: nil, review: ""),
-        Album(title: "Radical Optimism", artist: "Artist 8", coverImage: "cover8", rating: nil, review: ""),
-        Album(title: "The Rise and Fall of a Midwest Princess", artist: "Artist 9", coverImage: "cover9", rating: nil, review: ""),
-        Album(title: "THINK LATER", artist: "Artist 10", coverImage: "cover10", rating: nil, review: ""),
+        Album(title: "HIT ME HARD AND SOFT", artist: "Billie Eilish", coverImage: "cover1", rating: nil, review: ""),
+        Album(title: "eternal sunshine", artist: "Ariana Grande", coverImage: "cover2", rating: nil, review: ""),
+        Album(title: "COWBOY CARTER", artist: "Beyonce", coverImage: "cover3", rating: nil, review: ""),
+        Album(title: "brat", artist: "Charli XCX", coverImage: "cover4", rating: nil, review: ""),
+        Album(title: "TYLA", artist: "Tyla", coverImage: "cover5", rating: nil, review: ""),
+        Album(title: "MEGAN", artist: "Megan Thee Stallion", coverImage: "cover6", rating: nil, review: ""),
+        Album(title: "BB/ANG3L", artist: "Tinashe", coverImage: "cover7", rating: nil, review: ""),
+        Album(title: "GUTS", artist: "Olivia Rodrigo", coverImage: "cover8", rating: nil, review: ""),
+        Album(title: "The Rise and Fall of a Midwest Princess", artist: "Chappell Roan", coverImage: "cover9", rating: nil, review: ""),
+        Album(title: "THINK LATER", artist: "Tate McRae", coverImage: "cover10", rating: nil, review: ""),
 
 
     ]
